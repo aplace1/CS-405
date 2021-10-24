@@ -1,0 +1,92 @@
+Running Overflow Tests
+T = char
+Add ((25 * 5)) = 125
+Try (25 * 6) =  [OVERFLOW] 125
+T = wchar_t
+Add ((13107 * 5)) = 65535
+Try (13107 * 6) =  [OVERFLOW] 65535
+T = short
+Add ((6553 * 5)) = 32765
+Try (6553 * 6) =  [OVERFLOW] 32765
+T = int
+Add ((429496729 * 5)) = 2147483645
+Try (429496729 * 6) =  [OVERFLOW] 2147483645
+T = long
+Add ((429496729 * 5)) = 2147483645
+Try (429496729 * 6) =  [OVERFLOW] 2147483645
+T = __int64
+Add ((1844674407370955161 * 5)) = 9223372036854775805
+Try (1844674407370955161 * 6) =  [OVERFLOW] 9223372036854775805
+T = unsigned char
+Add ((51 * 5)) = 255
+Try (51 * 6) =  [OVERFLOW] 255
+T = unsigned short
+Add ((13107 * 5)) = 65535
+Try (13107 * 6) =  [OVERFLOW] 65535
+T = unsigned int
+Add ((858993459 * 5)) = 4294967295
+Try (858993459 * 6) =  [OVERFLOW] 4294967295
+T = unsigned long
+Add ((858993459 * 5)) = 4294967295
+Try (858993459 * 6) =  [OVERFLOW] 4294967295
+T = unsigned __int64
+Add ((3689348814741910323 * 5)) = 18446744073709551615
+Try (3689348814741910323 * 6) =  [OVERFLOW] 18446744073709551615
+T = float
+Add ((6.80565e+37 * 5)) = 3.40282e+38
+Try (6.80565e+37 * 6) = inf
+T = double
+Add ((3.59539e+307 * 5)) = 1.79769e+308
+Try (3.59539e+307 * 6) = inf
+T = long double
+Add ((3.59539e+307 * 5)) = 1.79769e+308
+Try (3.59539e+307 * 6) = inf
+
+42 processor ticks
+Running Underflow Tests
+T = char
+Subtract (127 - (25 * 5)) = 2
+Subtract (127 - (25 * 6)) =  [UNDERFLOW] 2
+T = wchar_t
+Subtract (65535 - (13107 * 5)) = 0
+Subtract (65535 - (13107 * 6)) =  [UNDERFLOW] 0
+T = short
+Subtract (32767 - (6553 * 5)) = 2
+Subtract (32767 - (6553 * 6)) =  [UNDERFLOW] 2
+T = int
+Subtract (2147483647 - (429496729 * 5)) = 2
+Subtract (2147483647 - (429496729 * 6)) =  [UNDERFLOW] 2
+T = long
+Subtract (2147483647 - (429496729 * 5)) = 2
+Subtract (2147483647 - (429496729 * 6)) =  [UNDERFLOW] 2
+T = __int64
+Subtract (9223372036854775807 - (1844674407370955161 * 5)) = 2
+Subtract (9223372036854775807 - (1844674407370955161 * 6)) =  [UNDERFLOW] 2
+T = unsigned char
+Subtract (255 - (51 * 5)) = 0
+Subtract (255 - (51 * 6)) =  [UNDERFLOW] 0
+T = unsigned short
+Subtract (65535 - (13107 * 5)) = 0
+Subtract (65535 - (13107 * 6)) =  [UNDERFLOW] 0
+T = unsigned int
+Subtract (4294967295 - (858993459 * 5)) = 0
+Subtract (4294967295 - (858993459 * 6)) =  [UNDERFLOW] 0
+T = unsigned long
+Subtract (4294967295 - (858993459 * 5)) = 0
+Subtract (4294967295 - (858993459 * 6)) =  [UNDERFLOW] 0
+T = unsigned __int64
+Subtract (18446744073709551615 - (3689348814741910323 * 5)) = 0
+Subtract (18446744073709551615 - (3689348814741910323 * 6)) =  [UNDERFLOW] 0
+T = float
+Subtract (3.40282e+38 - (6.80565e+37 * 5)) = 0
+Subtract (3.40282e+38 - (6.80565e+37 * 6)) = -6.80565e+37
+T = double
+Subtract (1.79769e+308 - (3.59539e+307 * 5)) = 9.9792e+291
+Subtract (1.79769e+308 - (3.59539e+307 * 6)) = -3.59539e+307
+T = long double
+Subtract (1.79769e+308 - (3.59539e+307 * 5)) = 9.9792e+291
+Subtract (1.79769e+308 - (3.59539e+307 * 6)) = -3.59539e+307
+92 processor ticks
+
+ -- Tests Complete!
+93 total processor ticks
